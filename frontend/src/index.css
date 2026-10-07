@@ -1,0 +1,253 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ /* Base styles */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #1f2937;
+  line-height: 1.6;
+  background-image: url('./assets/ffbank-background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  background-attachment: fixed;
+}
+/* Container styles */
+div {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Headings */
+h2 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+/* Buttons */
+button,
+a button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+  width: 100%;
+}
+
+button:hover,
+a button:hover {
+  transform: translateY(-1px);
+}
+
+button:active,
+a button:active {
+  transform: translateY(0);
+}
+
+/* Button colors */
+.bg-blue-600 {
+  background-color: #0066cc;
+  color: #ffffff;
+}
+
+.bg-blue-600:hover {
+  background-color: #005bb5;
+}
+
+.bg-red-600 {
+  background-color: #ff3333;
+  color: #ffffff;
+}
+
+.bg-red-600:hover {
+  background-color: #e62e2e;
+}
+
+/* Inputs */
+input[type='text'],
+input[type='password'],
+input[type='number'],
+input[type='email'],
+input[type='file'] {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+input::placeholder {
+  color: #9ca3af;
+}
+
+/* Links */
+a {
+  color: #1e90ff;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: #1c86ee;
+  text-decoration: underline;
+}
+
+/* Forms */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Common Layout Styles for Landing, Login, and Dashboard */
+.min-h-screen {
+  min-height: 100vh;
+}
+
+.flex.justify-center.items-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Updated container styles for login panel */
+.bg-white.p-6.rounded-lg.shadow-lg {
+  background-color: transparent; 
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 28rem;
+}
+
+.grid.grid-cols-1.gap-4 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.space-y-4 > * {
+  margin-bottom: 1rem;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  border-radius: 0.375rem;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+th,
+td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+th {
+  background-color: #e5e7eb;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+tbody tr:hover {
+  background-color: #f9fafb;
+}
+
+/* Alerts */
+.text-red-500 {
+  color: #ef4444;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.text-green-500 {
+  color: #10b981;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  div {
+    padding: 1rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  table {
+    font-size: 0.875rem;
+  }
+
+  th,
+  td {
+    padding: 0.5rem;
+  }
+
+  .p-8 {
+    padding: 1rem;
+  }
+
+  .max-w-md.mx-auto {
+    margin: 1rem;
+  }
+
+  .bg-white.p-6.rounded-lg.shadow-lg {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  button,
+  input {
+    font-size: 0.875rem;
+    padding: 0.5rem;
+  }
+
+  .space-y-4 > * {
+    margin-bottom: 0.75rem;
+  }
+
+  .w-full.border-collapse {
+    display: block;
+    overflow-x: auto;
+  }
+}
